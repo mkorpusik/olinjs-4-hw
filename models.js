@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/users');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/users');
 
 var userSchema = mongoose.Schema({
   name: String

@@ -4,6 +4,7 @@
  */
 
 exports.index = function(req, res){
+  //TODO: get this to work in browser, not just console
   var getTweets = function(){
   	var newTweets = ["this is a tweet", "another tweet"];
     console.log(newTweets);
