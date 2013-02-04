@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  script(src='/javascripts/twitter.js')
+
+  h1= title
+
+  form(id="newTwit")
+    | Compose a Twit
+    input(name="twit")
+    input(type="submit", value="Send Twit")
+
+  include _twits
