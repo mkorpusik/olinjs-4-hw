@@ -20,14 +20,13 @@ exports.login = function(req, res){
       var user = new User({ name: req.body.name});
       console.log(user);
       user.save(function (err) {
-    
-      if (err)
-        return console.log("error: couldn't save user");
-    
-      // redirect to new user page
-      req.session.user = user;
-      res.redirect('/');
+        if (err)
+          return console.log("error: couldn't save user");
+        // redirect to new user page
+        req.session.user = user;
+        res.redirect('/');
       });
+      return;
     }
     
     // login with sessions if user exists
@@ -46,8 +45,8 @@ exports.login = function(req, res){
 
 exports.user = function(req, res){
   var twit = req.body.twit;
-	var user = req.session.user[0];
-  console.log(user);
+	var user = req.session.user;
+  console.log(req.session);
   console.log(twit);
   console.log(user._id);
   
@@ -59,7 +58,7 @@ exports.user = function(req, res){
         return console.log("error: couldn't save twit");
     });
     return true;
-
+hi
   } else
     return false;
 };
