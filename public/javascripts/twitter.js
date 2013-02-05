@@ -15,7 +15,10 @@ $(document).ready(function (){
 
   // render list of twits every 2 secs
   var getTweets = function(){
-    $.get("/tweets/list");
+    $.get("/tweets/list", function(response) {
+      console.log(response);
+      $('.twits').replaceWith(response);
+    });
     //alert("checking for new twits");
    };
   setInterval(getTweets, 2000);

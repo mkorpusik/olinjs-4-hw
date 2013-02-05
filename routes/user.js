@@ -46,13 +46,14 @@ exports.login = function(req, res){
 
 exports.user = function(req, res){
   var twit = req.body.twit;
-	var user = req.session.user;
-  console.log('twit posted by user: '+user);
-  console.log(req.body); // Why is this undefined???
+	var user = req.session.user[0];
+  console.log(user);
+  console.log(twit);
+  console.log(user._id);
   
   if (twit.length<140) {
     // create new twit with username and message
-    var twit = new Twit({ _creator: user, message: twit});
+    var twit = new Twit({ _creator: user._id, message: twit});
     twit.save(function (err) {
       if (err)
         return console.log("error: couldn't save twit");

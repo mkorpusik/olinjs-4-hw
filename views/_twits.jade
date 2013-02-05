@@ -1,4 +1,7 @@
-p Look at all these twits!
-each twit, i in twits
-  div #{twit._creator.name}
-    p #{twit.message}
+div(class="twits")
+  h2 Look at all these twits!
+  - console.log(twits)
+  div(class="line")
+  each twit, i in twits
+    h3 #{twit._creator.name}
+      p #{twit.message} 

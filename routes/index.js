@@ -23,7 +23,10 @@ exports.index = function(req, res){
 };
 
 exports.list = function(req, res) {
-  var twits = Twit.find({}, function(err, foundTwits) {
+  var twits = Twit.find({}).populate('_creator').exec(function(err, foundTwits) {
+    if (err)
+      return console.log(err);
+    console.log(foundTwits);
     res.render('_twits', {twits: foundTwits});
   });
 };

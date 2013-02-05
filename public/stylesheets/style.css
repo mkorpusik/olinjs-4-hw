@@ -1,8 +1,81 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+	text-align: left;
+	padding-left: 10px;
+}
+
+h2 {
+	margin-bottom: 2px;
+}
+
+p {
+	text-align: left;
+	padding-left: 10px;
+}
+
 body {
+  background-color:rgb(50,149,255);
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+#newTwit {
+	display:inline-block;
+	text-align: center;
+	border-radius: 10px;
+	border:4px black solid;
+	padding: 5px;
+	background-color:rgb(122,130,135);
+	width: 250px;
+}
+
+.padding {
+	padding: 5px;
+	display: inline-block;
+}
+
+.wrap {
+	width: 50px;
+	white-space: normal;
+	display:inline-block;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.button {
+	display: block;
+	position:relative;
+	margin-bottom: 10px;
+	left: 165px;	
+	border: none;
+}
+
+.twits {
+	display:inline-block;
+	padding: 5px;
+	background-color: rgb(122,130,135);
+	width: 400px;
+	text-align: center;
+	border-radius: 10px;
+	border:4px black solid;
+	overflow: auto;
+}
+
+.vert_align {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.textbox {
+	width: 150px;
+	margin-left: 18px;
+}
+
+.line {
+	border:2px black solid;
+	padding: 0px;
+	margin: 0px;
 }

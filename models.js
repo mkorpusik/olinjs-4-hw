@@ -8,7 +8,7 @@ var userSchema = mongoose.Schema({
 var User = mongoose.model('User', userSchema);
 
 var twitSchema = mongoose.Schema({
-  _creator: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  _creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   message: String
 });
 

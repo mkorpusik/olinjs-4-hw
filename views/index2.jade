@@ -5,9 +5,11 @@ block content
 
   h1= title
 
-  form(id="newTwit")
-    | Compose a Twit
-    input(name="twit")
-    input(type="submit", value="Send Twit")
+  div(class="vert_align")
+    form(id="newTwit")
+      h3(class="wrap") Compose a Twit
+      input(class="textbox", name="twit")
+      input(class="button", type="submit", value="Send Twit")
 
+    div(class="padding")
   include _twits
